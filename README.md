@@ -6,3 +6,6 @@
 ### Alihan Djamankulov
 ### Alexandra Vovc
 ### Peter Isaac Fishman
+
+## Project Description:
+We will be building a Desktop Application using Java Android Studio for our clients
