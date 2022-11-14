@@ -8,7 +8,7 @@
 ### Peter Isaac Fishman
 
 ## Project Description:
-We will be building a Desktop Application using Java Android Studio for our clients
+We will be building a Android Application using Java Android Studio for our clients.
 
 ## Mockup:
 https://app.uizard.io/p/91cf3932
