@@ -36,6 +36,7 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        //INITIALIZING ALL
         alreadyHaveAccount = findViewById(R.id.alreadyHaveAccount);
         etEmailSU = findViewById(R.id.etEmailSU);
         etPasswordSU = findViewById(R.id.etPasswordSU);
@@ -46,6 +47,7 @@ public class RegisterActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
 
+        //RETURN TO LOGIN IF ACCOUNT IS ALREADY MADE
         alreadyHaveAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,6 +55,7 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
+        //SIGNUP METHOD WHEN BUTTON CLICKED
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,19 +65,20 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
+    //AUTHENTICATE INFORMATION
     private void PerformAuth() {
         String email=etEmailSU.getText().toString();
         String password=etPasswordSU.getText().toString();
         String confirmpassword=etPasswordConfirmSU.getText().toString();
 
         if(!email.matches(emailPattern)){
-            etEmailSU.setError("Enter valid email!");
+            etEmailSU.setError("Enter valid email!"); //VALIDATING EMAIL USING REGEX STRING
         } else if(password.isEmpty() || password.length()<8 ){
-            etPasswordSU.setError("Enter valid password! Must be over 8 characters!");
+            etPasswordSU.setError("Enter valid password! Must be over 8 characters!"); //VALIDATING PASSWORD OVER 8 CHARACTERS
         } else if(!password.equals(confirmpassword)){
-            etPasswordConfirmSU.setError("Passwords do not match!");
+            etPasswordConfirmSU.setError("Passwords do not match!"); //VALIDATING IF PASSWORDS MATCH
         } else {
-            progressDialog.setMessage("Registration in progress!");
+            progressDialog.setMessage("Registration in progress!"); //LIVE UPDATE WHILE PUSHING TO DATABASE
             progressDialog.setTitle("Registering");
             progressDialog.setCanceledOnTouchOutside(false);
             progressDialog.show();
@@ -96,6 +100,7 @@ public class RegisterActivity extends AppCompatActivity {
         }
     }
 
+    //RETURN TO LOGIN IF SIGNUP SUCCESSFUL
     private void nextActivity() {
         Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);

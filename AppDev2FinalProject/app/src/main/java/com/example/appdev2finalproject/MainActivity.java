@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //INITIALIZING ALL
         etEmail = findViewById(R.id.etEmail);
         etPassword = findViewById(R.id.etPassword);
         progressDialog = new ProgressDialog(this);
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnSignup = findViewById(R.id.btnSignup);
 
+        //ENTER SIGNUP PAGE
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //LOGIN IF ALL IS SUCCESSFUL
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,22 +63,24 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //METHOD TO CREATE LOGIN
     private void PerformLogin() {
         String email=etEmail.getText().toString();
         String password=etPassword.getText().toString();
 
+        //VALIDATING EMAIL
         if(!email.matches(emailPattern)){
             etEmail.setError("Enter correct email!");
         } else if(password.isEmpty() || password.length()<8 ){
-            etPassword.setError("Enter correct password!");
+            etPassword.setError("Enter correct password!"); //VALIDATING PASSWORD
         } else {
-            progressDialog.setMessage("Logging in!");
+            progressDialog.setMessage("Logging in!"); //PROGRESS DIALOG TO SHOW USER LIVE UPDATE WHILE CHECKING DATABASE
             progressDialog.setTitle("Login");
             progressDialog.setCanceledOnTouchOutside(false);
             progressDialog.show();
 
             mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                @Override
+                @Override // OPENS DASHBOARD OR RELAYS MESSAGE WITH INCORRECT DETAILS
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
                         nextActivityDashboard();
@@ -91,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //METHOD TO ENTER DASHBOARD WHEN LOGIN SUCCESSFUL
     private void nextActivityDashboard() {
         Intent intent = new Intent(MainActivity.this, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
