@@ -14,15 +14,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        drawerLayout = findViewById(R.id.drawer_layout);
-        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.nav_open,
-                R.string.nav_close);
-
-        drawerLayout.addDrawerListener(actionBarDrawerToggle);
-        actionBarDrawerToggle.syncState();
-
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        drawerLayout = findViewById(R.id.drawer_layout);
+//        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.nav_open,
+//                R.string.nav_close);
+//
+//        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+//        actionBarDrawerToggle.syncState();
+//
+//
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
 }

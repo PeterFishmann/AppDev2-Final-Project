@@ -30,6 +30,7 @@
         android:ems="10"
         android:hint="Username"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/etNameSU"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,6 +44,7 @@
         android:ems="10"
         android:hint="Full Name"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/etPasswordSU"
         app:layout_constraintStart_toStartOf="@+id/etUsernameSU"
         app:layout_constraintTop_toBottomOf="@+id/etUsernameSU" />
@@ -55,6 +57,7 @@
         android:ems="10"
         android:hint="Password"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/etPasswordConfirmSU"
         app:layout_constraintStart_toStartOf="@+id/etNameSU"
         app:layout_constraintTop_toBottomOf="@+id/etNameSU" />
@@ -67,6 +70,7 @@
         android:ems="10"
         android:hint="Confirm Password"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/btnSignup"
         app:layout_constraintStart_toStartOf="@+id/etPasswordSU"
         app:layout_constraintTop_toBottomOf="@+id/etPasswordSU" />
