@@ -65,35 +65,30 @@ public class MainActivity extends AppCompatActivity {
 
     //METHOD TO CREATE LOGIN
     private void PerformLogin() {
-        String email=etEmail.getText().toString();
-        String password=etPassword.getText().toString();
+        String email = etEmail.getText().toString();
+        String password = etPassword.getText().toString();
 
         //VALIDATING EMAIL
-        if(!email.matches(emailPattern)){
+        if (!email.matches(emailPattern)) {
             etEmail.setError("Enter correct email!");
-        } else if(password.isEmpty() || password.length()<8 ){
+        } else if (password.isEmpty() || password.length() < 8) {
             etPassword.setError("Enter correct password!"); //VALIDATING PASSWORD
-        } else {
-            progressDialog.setMessage("Logging in!"); //PROGRESS DIALOG TO SHOW USER LIVE UPDATE WHILE CHECKING DATABASE
-            progressDialog.setTitle("Login");
-            progressDialog.setCanceledOnTouchOutside(false);
-            progressDialog.show();
-
-            mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                @Override // OPENS DASHBOARD OR RELAYS MESSAGE WITH INCORRECT DETAILS
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    if(task.isSuccessful()){
-                        nextActivityDashboard();
-                        progressDialog.dismiss();
-                        Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                    } else {
-                        progressDialog.dismiss();
-                        Toast.makeText(MainActivity.this, ""+task.getException(), Toast.LENGTH_SHORT).show();
-                    }
-                }
-            });
-
         }
+
+        mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override // OPENS DASHBOARD OR RELAYS MESSAGE WITH INCORRECT DETAILS
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()) {
+                    nextActivityDashboard();
+                    progressDialog.dismiss();
+                    Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                } else {
+                    progressDialog.dismiss();
+                    Toast.makeText(MainActivity.this, "" + task.getException(), Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
     }
 
     //METHOD TO ENTER DASHBOARD WHEN LOGIN SUCCESSFUL
