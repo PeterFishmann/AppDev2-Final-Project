@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainMenu"
+    android:background="@color/material_dynamic_tertiary90">
+
+
+    <Button
+        android:id="@+id/buttonHotel"
+        android:layout_width="163dp"
+        android:layout_height="51dp"
+        android:text="Book Hotels"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAccount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.748" />
+
+    <Button
+        android:id="@+id/buttonAccount"
+        android:layout_width="166dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="40dp"
+        android:text="View Account"
+        app:layout_constraintBottom_toTopOf="@+id/buttonWallet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonWallet"
+        android:layout_width="162dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="40dp"
+        android:text="View Wallet"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCreateListing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonCreateListing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="Create Listing"
+        app:layout_constraintBottom_toTopOf="@+id/buttonMyListings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonMyListings"
+        android:layout_width="150dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="200dp"
+        android:text="My Listings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
