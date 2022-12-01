@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.appdev2finalproject" >
+=======
+    xmlns:tools="http://schemas.android.com/tools">
+>>>>>>> parent of 87f49fe (back to my code)
 
     <application
         android:allowBackup="true"
@@ -14,11 +18,58 @@
         android:theme="@style/Theme.AppDev2FinalProject"
         tools:targetApi="31" >
         <activity
+<<<<<<< HEAD
             android:name=".Dashboard"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true" >
+=======
+            android:name=".MyListings"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".CreateListing"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ViewWallet"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ViewAccount"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".BookHotels"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".MainMenu"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+>>>>>>> parent of 87f49fe (back to my code)
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
