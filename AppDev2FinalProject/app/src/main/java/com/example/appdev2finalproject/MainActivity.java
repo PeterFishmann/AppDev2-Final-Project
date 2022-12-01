@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Dashboard.class));
+                startActivity(new Intent(MainActivity.this, RegisterActivity.class));
             }
         });
 
@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
 
     //METHOD TO ENTER DASHBOARD WHEN LOGIN SUCCESSFUL
     private void nextActivityDashboard() {
-        Intent intent = new Intent(MainActivity.this, MainActivity.class);
+        Intent intent = new Intent(MainActivity.this, Dashboard.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
