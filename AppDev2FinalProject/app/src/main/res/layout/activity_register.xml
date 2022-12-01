@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/material_dynamic_tertiary90">
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -16,7 +15,7 @@
         android:fontFamily="sans-serif-condensed-light"
         android:text="Sign Up"
         android:textAlignment="center"
-        android:textColor="@color/cardview_dark_background"
+        android:textColor="@color/black"
         android:textSize="40dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/etEmailSU"
@@ -66,10 +65,8 @@
         android:id="@+id/btnSignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
         android:layout_marginBottom="23dp"
         android:text="Signup"
-        app:backgroundTint="@color/purple_700"
         app:layout_constraintBottom_toTopOf="@+id/alreadyHaveAccount"
         app:layout_constraintStart_toStartOf="@+id/accountSpinner"
         app:layout_constraintTop_toBottomOf="@+id/accountSpinner" />
@@ -90,7 +87,6 @@
         android:layout_height="0dp"
         android:layout_marginBottom="125dp"
         android:text="Already have an account?"
-        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
