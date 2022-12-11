@@ -2,7 +2,8 @@
 
 ## Project Title - Total travel
 
-[]
+![](https://github.com/Smuglyak/EcommerceProject/blob/main/images/pochitadancing-pochita.gif)
+![](https://github.com/Smuglyak/EcommerceProject/blob/main/images/pochitadancing-pochita.gif)
 
 ## Team members:
 ### Alihan Djamankulov
