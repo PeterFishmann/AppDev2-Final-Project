@@ -15,10 +15,11 @@
         <activity
             android:name=".Dashboard"
             android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".MainActivity"-->
+<!--            android:exported="true" />-->
+
         <activity
-            android:name=".MainActivity"
-            android:exported="true" >
-=======
             android:name=".MyListings"
             android:exported="false">
             <meta-data
