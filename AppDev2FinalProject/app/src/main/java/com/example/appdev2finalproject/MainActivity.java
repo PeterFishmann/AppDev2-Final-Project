@@ -5,6 +5,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,7 +23,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnLogin, btnSignup;
+    Button btnLogin, btnSignup, aliButton;
     EditText etEmail, etPassword;
     String emailPattern = "^[A-Za-z0-9+_.-]+@(.+)$";
     ProgressDialog progressDialog;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
     FirebaseUser mUser;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,12 +46,13 @@ public class MainActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.btnLogin);
 
         btnSignup = findViewById(R.id.btnSignup);
+        aliButton = findViewById(R.id.button2);
 
         //ENTER SIGNUP PAGE
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Dashboard.class));
+                startActivity(new Intent(MainActivity.this, RegisterActivity.class));
             }
         });
 
@@ -58,6 +61,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 PerformLogin();
+            }
+        });
+
+        aliButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, Dashboard.class));
             }
         });
 

@@ -1,4 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <group android:checkableBehavior="single">
 
+            <item
+                android:id="@+id/nav_dashboard"
+                android:icon="@drawable/ic_home"
+                android:title="Dashboard"/>
+
+            <item
+                android:id="@+id/nav_hotels"
+                android:icon="@drawable/ic_hotel"
+                android:title="View Hotels"/>
+
+            <item
+                android:id="@+id/nav_wallet"
+                android:icon="@drawable/ic_wallet"
+                android:title="My Wallet"/>
+
+            <item
+                android:id="@+id/nav_account"
+                android:icon="@drawable/ic_account"
+                android:title="My Account"/>
+
+            <item
+                android:id="@+id/nav_list"
+                android:icon="@drawable/ic_add"
+                android:title="Create Listing"/>
+
+            <item
+                android:id="@+id/nav_listings"
+                android:icon="@drawable/ic_listings"
+                android:title="My Listings"/>
+
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_login"
+                android:title="Log Out"/>
+        </group>
 </menu>
