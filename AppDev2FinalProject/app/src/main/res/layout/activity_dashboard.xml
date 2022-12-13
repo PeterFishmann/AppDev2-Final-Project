@@ -13,24 +13,41 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-      <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:background="#EC407A"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navigationIcon="@drawable/ic_menu"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EC407A"
+            android:gravity="right"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_menu">
+            
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:orientation="horizontal">
 
-      <FrameLayout
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="goToAccount"
+                    android:src="@drawable/ic_account" />
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <FrameLayout
           android:id="@+id/fragment_container"
           android:layout_width="match_parent"
           android:layout_height="match_parent"
           tools:layout_editor_absoluteX="-205dp"
-          tools:layout_editor_absoluteY="16dp" />
+          tools:layout_editor_absoluteY="16dp" >
+
+        </FrameLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

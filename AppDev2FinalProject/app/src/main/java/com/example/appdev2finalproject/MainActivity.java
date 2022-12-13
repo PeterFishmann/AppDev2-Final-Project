@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
 
     //METHOD TO ENTER DASHBOARD WHEN LOGIN SUCCESSFUL
     private void nextActivityDashboard() {
-        Intent intent = new Intent(MainActivity.this, MainActivity.class);
+        Intent intent = new Intent(MainActivity.this, Dashboard.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }

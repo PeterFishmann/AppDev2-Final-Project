@@ -1,10 +1,12 @@
 package com.example.appdev2finalproject;
 
+import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -15,6 +17,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
@@ -50,7 +53,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
 
         navigationView.setNavigationItemSelectedListener(this);
 
-        navigationView.setCheckedItem(R.id.nav_view);
+        navigationView.setCheckedItem(R.id.nav_dashboard);
     }
 
     public void onBackPressed() {
@@ -64,9 +67,6 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-//        FragmentManager fragmentManager = getFragmentManager();
-//        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
         switch (item.getItemId()) {
             case R.id.nav_view:
                 break;
@@ -87,11 +87,16 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
                 break;
             case R.id.nav_logout:
                 Toast.makeText(this, "Logged out", Toast.LENGTH_SHORT).show();
+                FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(Dashboard.this, MainActivity.class));
                 break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void goToAccount(View view){
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new EditAccount()).commit();
     }
 
 //    private void loadMenus() {
