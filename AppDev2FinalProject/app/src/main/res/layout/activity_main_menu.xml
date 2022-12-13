@@ -9,7 +9,6 @@
 
 
     <Button
-        android:id="@+id/buttonHotel"
         android:layout_width="163dp"
         android:layout_height="51dp"
         android:text="Book Hotels"

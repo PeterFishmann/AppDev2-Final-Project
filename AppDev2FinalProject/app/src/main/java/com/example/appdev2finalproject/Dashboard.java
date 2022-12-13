@@ -1,7 +1,11 @@
 package com.example.appdev2finalproject;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -45,22 +49,50 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         toggle.syncState();
 
         navigationView.setNavigationItemSelectedListener(this);
+
+        navigationView.setCheckedItem(R.id.nav_view);
     }
 
-    public void onBackPressed(){
+    public void onBackPressed() {
 
-        if(drawerLayout.isDrawerOpen(GravityCompat.START)){
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
-        }else {
+        } else {
             super.onBackPressed();
         }
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//        FragmentManager fragmentManager = getFragmentManager();
+//        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        switch (item.getItemId()) {
+            case R.id.nav_view:
+                break;
+            case R.id.nav_hotels:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ViewHotels()).commit();
+                break;
+            case R.id.nav_my_account:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MyAccount()).commit();
+                break;
+            case R.id.nav_create_listing:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new CreateListing()).commit();
+                break;
+            case R.id.nav_my_listings:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MyListings()).commit();
+                break;
+            case R.id.nav_wallet:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ViewWalletFragment()).commit();
+                break;
+            case R.id.nav_logout:
+                Toast.makeText(this, "Logged out", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(Dashboard.this, MainActivity.class));
+                break;
+        }
+        drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
-
 
 //    private void loadMenus() {
 //        menuList = new ArrayList<>(Arrays.asList("Book Hotels", "View account", "View Wallet",

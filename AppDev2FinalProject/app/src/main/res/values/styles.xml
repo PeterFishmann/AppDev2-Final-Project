@@ -10,16 +10,6 @@
 
     </style>
 
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
-
-<style name="Divider">
-<item name="android:layout_width">match_parent</item>
-<item name="android:layout_height">1dp</item>
-</style>
-
     <color name="colorPrimary">#FFFFFF</color>
     <color name="colorPrimaryDark">#00838F</color>
     <color name="colorAccent">#F44336</color>

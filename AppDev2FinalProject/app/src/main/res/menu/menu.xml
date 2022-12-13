@@ -3,7 +3,6 @@
         <group android:checkableBehavior="single">
 
             <item
-                android:id="@+id/nav_dashboard"
                 android:icon="@drawable/ic_home"
                 android:title="Dashboard"/>
 
@@ -18,17 +17,17 @@
                 android:title="My Wallet"/>
 
             <item
-                android:id="@+id/nav_account"
+                android:id="@+id/nav_my_account"
                 android:icon="@drawable/ic_account"
                 android:title="My Account"/>
 
             <item
-                android:id="@+id/nav_list"
+                android:id="@+id/nav_create_listing"
                 android:icon="@drawable/ic_add"
                 android:title="Create Listing"/>
 
             <item
-                android:id="@+id/nav_listings"
+                android:id="@+id/nav_my_listings"
                 android:icon="@drawable/ic_listings"
                 android:title="My Listings"/>
 
