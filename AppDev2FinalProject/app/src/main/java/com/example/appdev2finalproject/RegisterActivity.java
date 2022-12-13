@@ -25,7 +25,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class RegisterActivity extends AppCompatActivity {
 
     TextView alreadyHaveAccount;
-    EditText etEmailSU, etPasswordSU, etPasswordConfirmSU;
+    EditText etEmailSU, etPasswordSU, etPasswordConfirmSU, fname, lname;
     Button btnSignup;
     Spinner spinnerAcccountSpinner;
     String emailPattern = "^[A-Za-z0-9+_.-]+@(.+)$";
@@ -41,6 +41,8 @@ public class RegisterActivity extends AppCompatActivity {
 
         //INITIALIZING ALL
         alreadyHaveAccount = findViewById(R.id.alreadyHaveAccount);
+        fname = findViewById(R.id.name);
+        lname = findViewById(R.id.lastName);
         etEmailSU = findViewById(R.id.etEmailSU);
         etPasswordSU = findViewById(R.id.etPasswordSU);
         etPasswordConfirmSU = findViewById(R.id.etPasswordConfirmSU);
@@ -70,6 +72,8 @@ public class RegisterActivity extends AppCompatActivity {
 
     //AUTHENTICATE INFORMATION
     private void PerformAuth() {
+        String firstName = fname.getText().toString();
+        String lastName = lname.getText().toString();
         String email=etEmailSU.getText().toString();
         String password=etPasswordSU.getText().toString();
         String confirmpassword=etPasswordConfirmSU.getText().toString();
@@ -80,7 +84,11 @@ public class RegisterActivity extends AppCompatActivity {
             etPasswordSU.setError("Enter valid password! Must be over 8 characters!"); //VALIDATING PASSWORD OVER 8 CHARACTERS
         } else if(!password.equals(confirmpassword)){
             etPasswordConfirmSU.setError("Passwords do not match!"); //VALIDATING IF PASSWORDS MATCH
-        } else {
+        } else if(firstName.isEmpty()){
+            fname.setError("Enter your first name!");
+        } else if(lastName.isEmpty()){
+            lname.setError("Enter your last name!");
+        }else {
             progressDialog.setMessage("Registration in progress!"); //LIVE UPDATE WHILE PUSHING TO DATABASE
             progressDialog.setTitle("Registering");
             progressDialog.setCanceledOnTouchOutside(false);
