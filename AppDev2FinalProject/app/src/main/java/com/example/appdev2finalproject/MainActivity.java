@@ -1,5 +1,7 @@
 package com.example.appdev2finalproject;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +11,7 @@ import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,6 +20,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -47,6 +52,12 @@ public class MainActivity extends AppCompatActivity {
 
         btnSignup = findViewById(R.id.btnSignup);
         aliButton = findViewById(R.id.button2);
+
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser != null){
+            mUser.reload();
+        }
 
         //ENTER SIGNUP PAGE
         btnSignup.setOnClickListener(new View.OnClickListener() {
@@ -89,27 +100,58 @@ public class MainActivity extends AppCompatActivity {
             progressDialog.setCanceledOnTouchOutside(false);
             progressDialog.show();
 
-            mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                @Override // OPENS DASHBOARD OR RELAYS MESSAGE WITH INCORRECT DETAILS
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    if(task.isSuccessful()){
-                        nextActivityDashboard();
-                        progressDialog.dismiss();
-                        Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                    } else {
-                        progressDialog.dismiss();
-                        Toast.makeText(MainActivity.this, ""+task.getException(), Toast.LENGTH_SHORT).show();
-                    }
-                }
-            });
+//            mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+//                @Override // OPENS DASHBOARD OR RELAYS MESSAGE WITH INCORRECT DETAILS
+//                public void onComplete(@NonNull Task<AuthResult> task) {
+//                    if(task.isSuccessful()){
+//                        nextActivityDashboard();
+//                        progressDialog.dismiss();
+//                        Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+//                    } else {
+//                        progressDialog.dismiss();
+//                        Toast.makeText(MainActivity.this, ""+task.getException(), Toast.LENGTH_SHORT).show();
+//                    }
+//                }
+//            });
 
+            mAuth.signInWithEmailAndPassword(email, password)
+                    .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                        @Override
+                        public void onSuccess(AuthResult authResult) {
+                            // Sign in success, update UI with the signed-in user's information
+                            Log.d(TAG, "signInWithEmail:success");
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            progressDialog.dismiss();
+                            updateUI(user);
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            // If sign in fails, display a message to the user
+                            Log.w(TAG, "signInWithEmail:failure", e);
+                            Toast.makeText(MainActivity.this, "Authentication failed.",
+                                    Toast.LENGTH_SHORT).show();
+                            updateUI(null);
+                        }
+                    });
         }
     }
 
     //METHOD TO ENTER DASHBOARD WHEN LOGIN SUCCESSFUL
-    private void nextActivityDashboard() {
-        Intent intent = new Intent(MainActivity.this, Dashboard.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
+    private void updateUI(FirebaseUser user) {
+        if (user != null) {
+            // Navigate to a new activity or display the user's information
+            Intent intent = new Intent(this, Dashboard.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        } else {
+            // Display an error message or do nothing
+            // If sign in fails, display a message to the user
+//            Log.w(TAG, "createUserWithEmail:failure", task.getException());
+            Toast.makeText(MainActivity.this, "Authentication failed.",
+                    Toast.LENGTH_SHORT).show();
+            updateUI(null);
+        }
     }
 }

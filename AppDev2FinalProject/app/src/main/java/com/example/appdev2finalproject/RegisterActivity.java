@@ -1,11 +1,14 @@
 package com.example.appdev2finalproject;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -87,12 +90,17 @@ public class RegisterActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
-                        nextActivity();
+                        Log.d(TAG, "createUserWithEmail:success");
+                        FirebaseUser user = mAuth.getCurrentUser();
                         progressDialog.dismiss();
-                        Toast.makeText(RegisterActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                        updateUI(user);
+//                        Toast.makeText(RegisterActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
                     } else {
-                        progressDialog.dismiss();
-                        Toast.makeText(RegisterActivity.this, ""+task.getException(), Toast.LENGTH_SHORT).show();
+                        // If sign in fails, display a message to the user
+                        Log.w(TAG, "createUserWithEmail:failure", task.getException());
+                        Toast.makeText(RegisterActivity.this, "Authentication failed.",
+                                Toast.LENGTH_SHORT).show();
+                        updateUI(null);
                     }
                 }
             });
@@ -100,10 +108,19 @@ public class RegisterActivity extends AppCompatActivity {
         }
     }
 
-    //RETURN TO LOGIN IF SIGNUP SUCCESSFUL
-    private void nextActivity() {
-        Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
+    private void updateUI(FirebaseUser user) {
+        if (user != null) {
+            // Navigate to a new activity or display the user's information
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        } else {
+            // Display an error message or do nothing
+            // If sign in fails, display a message to the user
+//            Log.w(TAG, "createUserWithEmail:failure", task.getException());
+            Toast.makeText(RegisterActivity.this, "Authentication failed.",
+                    Toast.LENGTH_SHORT).show();
+            updateUI(null);
+        }
     }
 }
