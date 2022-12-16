@@ -1,4 +1,4 @@
-package com.example.appdev2finalproject;
+package com.example.appdev2finalproject.fragments;
 
 import android.os.Bundle;
 
@@ -7,6 +7,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.appdev2finalproject.R;
+
 public class ViewWalletFragment extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";

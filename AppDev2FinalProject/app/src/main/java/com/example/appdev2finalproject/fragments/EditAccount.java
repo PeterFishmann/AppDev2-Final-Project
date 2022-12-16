@@ -1,4 +1,4 @@
-package com.example.appdev2finalproject;
+package com.example.appdev2finalproject.fragments;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -16,6 +16,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import com.example.appdev2finalproject.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -80,19 +81,19 @@ String _FNAME, _LNAME, _EMAIL;
     }
 
     private void saveChanges(View rootView) {
-
-        if(isNameChanged() || isLnameChanged() || isEmailChanged()){
-            Toast.makeText(getActivity(), "Data has been updated", Toast.LENGTH_SHORT).show();
-        }
+//
+//        if(isNameChanged() || isLnameChanged() || isEmailChanged()){
+//            Toast.makeText(getActivity(), "Data has been updated", Toast.LENGTH_SHORT).show();
+//        }
 
 //        return rootView;
     }
 
-    private boolean isEmailChanged() {
-    }
-
-    private boolean isLnameChanged() {
-    }
+//    private boolean isEmailChanged() {
+//    }
+//
+//    private boolean isLnameChanged() {
+//    }
 
     private boolean isNameChanged() {
         if(!_FNAME.equals(fName.getText().toString())){

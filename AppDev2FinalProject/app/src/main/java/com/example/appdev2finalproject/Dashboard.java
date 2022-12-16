@@ -1,8 +1,5 @@
 package com.example.appdev2finalproject;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -15,7 +12,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 
+import com.example.appdev2finalproject.fragments.CreateListing;
+import com.example.appdev2finalproject.fragments.EditAccount;
+import com.example.appdev2finalproject.fragments.MyAccount;
+import com.example.appdev2finalproject.fragments.MyListings;
+import com.example.appdev2finalproject.fragments.ViewHotels;
+import com.example.appdev2finalproject.fragments.ViewWalletFragment;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -68,8 +72,10 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.nav_view:
-                break;
+//            case R.id.nav_view:
+//                Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.fragment_container);
+//                getSupportFragmentManager().beginTransaction().remove(fragment).commit();
+//                break;
             case R.id.nav_hotels:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ViewHotels()).commit();
                 break;
@@ -103,7 +109,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
 //        menuList = new ArrayList<>(Arrays.asList("Book Hotels", "View account", "View Wallet",
 //                "Create Listing", "My Listings"));
 //        RecyclerView recyclerView = findViewById(R.id.recyclerView);
-//        DashboardAdapter adapter = new DashboardAdapter(menuList, Dashboard.this);
+//        ViewHotelsAdapter adapter = new ViewHotelsAdapter(menuList, Dashboard.this);
 //        recyclerView.setAdapter(adapter);
 //        recyclerView.setLayoutManager(new LinearLayoutManager(Dashboard.this, LinearLayoutManager.VERTICAL, false));
 //    }

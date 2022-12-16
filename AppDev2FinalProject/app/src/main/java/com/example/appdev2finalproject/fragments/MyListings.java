@@ -1,4 +1,4 @@
-package com.example.appdev2finalproject;
+package com.example.appdev2finalproject.fragments;
 
 import android.os.Bundle;
 
@@ -8,12 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.appdev2finalproject.R;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link MyAccount#newInstance} factory method to
+ * Use the {@link MyListings#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MyAccount extends Fragment {
+public class MyListings extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +26,7 @@ public class MyAccount extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public MyAccount() {
+    public MyListings() {
         // Required empty public constructor
     }
 
@@ -34,11 +36,11 @@ public class MyAccount extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment MyAccount.
+     * @return A new instance of fragment MyListings.
      */
     // TODO: Rename and change types and number of parameters
-    public static MyAccount newInstance(String param1, String param2) {
-        MyAccount fragment = new MyAccount();
+    public static MyListings newInstance(String param1, String param2) {
+        MyListings fragment = new MyListings();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +61,6 @@ public class MyAccount extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_my_account, container, false);
+        return inflater.inflate(R.layout.fragment_my_listings, container, false);
     }
 }
