@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.appdev2finalproject.fragments.CreateListing;
 import com.example.appdev2finalproject.fragments.EditAccount;
+import com.example.appdev2finalproject.fragments.HotelDetails;
 import com.example.appdev2finalproject.fragments.MyAccount;
 import com.example.appdev2finalproject.fragments.MyListings;
 import com.example.appdev2finalproject.fragments.ViewHotels;
@@ -102,7 +103,13 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     }
 
     public void goToAccount(View view){
+        navigationView.setCheckedItem(R.id.nav_dashboard);
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new EditAccount()).commit();
+    }
+
+    public void goToHotel(View view) {
+        navigationView.setCheckedItem(R.id.nav_hotels);
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HotelDetails()).commit();
     }
 
 //    private void loadMenus() {

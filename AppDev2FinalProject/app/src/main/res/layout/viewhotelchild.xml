@@ -12,23 +12,24 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
+        android:onClick="goToHotel"
         app:layout_constraintTop_toTopOf="parent"></ImageView>
 
     <TextView
         android:id="@+id/hotelName"
         android:layout_width="213dp"
         android:layout_height="35dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/hotelDesc"
-        android:layout_width="220dp"
+        android:layout_width="213dp"
         android:layout_height="51dp"
         android:layout_marginTop="72dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

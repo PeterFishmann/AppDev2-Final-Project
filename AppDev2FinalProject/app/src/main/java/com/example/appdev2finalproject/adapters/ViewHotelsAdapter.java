@@ -8,11 +8,9 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.example.appdev2finalproject.R;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ViewHotelsAdapter extends RecyclerView.Adapter<ViewHotelsHolder> {
 
@@ -31,7 +29,7 @@ public class ViewHotelsAdapter extends RecyclerView.Adapter<ViewHotelsHolder> {
     @NonNull
     @Override
     public ViewHotelsHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.hoteltab, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewhotelchild, parent, false);
         return new ViewHotelsHolder(view);
     }
 
