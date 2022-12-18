@@ -32,7 +32,6 @@ public class ViewHotels extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
@@ -40,8 +39,7 @@ public class ViewHotels extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_view_hotels, container, false);
-        recyclerView = rootView.findViewById(R.id.recyclerView);
-        loadHotels(recyclerView);
+//        loadHotels(recyclerView);
         return rootView;
     }
 

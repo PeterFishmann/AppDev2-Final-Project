@@ -38,10 +38,6 @@ public class ViewHotelsAdapter extends RecyclerView.Adapter<ViewHotelsHolder> {
         holder.hotelName.setText(hotelNames.get(position));
         holder.hotelDesc.setText(hotelDescs.get(position));
         holder.hotelImg.setImageResource(mImageUrls[position]);
-//        String imageUrl = mImageUrls.get(position);
-//        Glide.with(myContext)
-//                .load(imageUrl)
-//                .into(holder.hotelImg);
     }
 
     @Override

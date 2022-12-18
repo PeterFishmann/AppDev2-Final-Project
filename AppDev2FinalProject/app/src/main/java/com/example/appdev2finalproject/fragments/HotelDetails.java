@@ -7,20 +7,21 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.example.appdev2finalproject.R;
+import com.example.appdev2finalproject.pogo.Hotel;
 
 public class HotelDetails extends Fragment {
 
-
+    Hotel currentHotel;
+    ImageView hotelImg;
 
     public HotelDetails() {
-        // Required empty public constructor
+
     }
 
-
-    // TODO: Rename and change types and number of parameters
-    public static HotelDetails newInstance(String param1, String param2) {
+    public static HotelDetails newInstance() {
         HotelDetails fragment = new HotelDetails();
         return fragment;
     }
