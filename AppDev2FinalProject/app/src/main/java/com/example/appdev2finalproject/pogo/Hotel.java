@@ -5,9 +5,9 @@ import java.util.HashMap;
 
 public class Hotel implements Serializable {
 
-    String name;
-    String hotelDesc;
-    int price;
+    public String name;
+    public String hotelDesc;
+    public int price;
 //    int img;
 
     public Hotel(String name, String hotelDesc, int price) {

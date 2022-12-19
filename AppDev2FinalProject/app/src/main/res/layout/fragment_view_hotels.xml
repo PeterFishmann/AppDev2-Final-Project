@@ -45,7 +45,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="600dp"
         android:text="Hotel VIP"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toEndOf="@+id/vipImg"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -55,7 +55,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="4dp"
         android:text="Only for VIP"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toEndOf="@+id/vipImg"
         app:layout_constraintTop_toBottomOf="@+id/vipHotel" />
 
     <TextView
@@ -85,7 +85,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="332dp"
         android:text="Hotel Trivago"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintStart_toEndOf="@+id/trivagoImg"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -95,7 +95,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="364dp"
         android:text="Trivago the only option"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintStart_toEndOf="@+id/trivagoImg"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -127,7 +127,7 @@
         android:clickable="true"
         android:src="@drawable/ew"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintTop_toBottomOf="@+id/trivagoImg" />
 
     <ImageView
         android:id="@+id/transHotelImg"
@@ -142,7 +142,7 @@
         app:layout_constraintTop_toBottomOf="@+id/aiAiHotelImg" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/trivagoImg"
         android:onClick="goToHotelPage"
         android:clickable="true"
         android:layout_width="114dp"
@@ -154,7 +154,7 @@
         app:layout_constraintTop_toBottomOf="@+id/transHotelImg" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/vipImg"
         android:layout_width="114dp"
         android:layout_height="114dp"
         android:layout_marginStart="24dp"
