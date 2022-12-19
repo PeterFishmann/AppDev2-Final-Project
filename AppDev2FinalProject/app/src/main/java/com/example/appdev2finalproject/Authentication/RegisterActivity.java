@@ -1,4 +1,4 @@
-package com.example.appdev2finalproject;
+package com.example.appdev2finalproject.Authentication;
 
 import static android.content.ContentValues.TAG;
 
@@ -16,6 +16,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.appdev2finalproject.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;

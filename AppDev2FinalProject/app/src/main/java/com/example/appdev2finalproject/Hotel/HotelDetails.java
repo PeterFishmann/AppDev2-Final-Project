@@ -1,16 +1,21 @@
-package com.example.appdev2finalproject;
+package com.example.appdev2finalproject.Hotel;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.appdev2finalproject.R;
 import com.example.appdev2finalproject.pogo.Hotel;
 
 public class HotelDetails extends AppCompatActivity {
     ImageView currentImage;
     Hotel currentHotel;
+    Button bookHotel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,16 +33,27 @@ public class HotelDetails extends AppCompatActivity {
 
         //current hotel Description
         setHotelDesc();
+
+        bookHotel = findViewById(R.id.bookHotelBtn);
+
+        bookHotel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent switchActivity = new Intent(HotelDetails.this, BookHotel.class);
+                switchActivity.putExtra("hotelInfo", currentHotel);
+                startActivity(switchActivity);
+            }
+        });
     }
 
-    private void setHotelDesc() {
+    public void setHotelDesc() {
         TextView hotelDesc = findViewById(R.id.hoteilDetailsDesc);
         String info = currentHotel.hotelDesc;
         String msg = "\"" + info + "\"";
         hotelDesc.setText(msg);
     }
 
-    private void setPizzaImg(String name) {
+    public void setPizzaImg(String name) {
 
         switch (name) {
             case "Hotel Ai Ai":
@@ -57,4 +73,6 @@ public class HotelDetails extends AppCompatActivity {
                 break;
         }
     }
+
+
 }
