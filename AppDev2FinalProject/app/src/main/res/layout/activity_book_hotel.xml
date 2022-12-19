@@ -7,7 +7,7 @@
     tools:context=".Hotel.BookHotel">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/hotelDetail"
         android:layout_width="202dp"
         android:layout_height="60dp"
         android:layout_marginStart="32dp"
@@ -32,7 +32,7 @@
         android:layout_height="36dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="188dp"
-        android:text="Arrival Date"
+        android:text="Number of days"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -56,7 +56,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/creditCard"
         android:layout_width="195dp"
         android:layout_height="39dp"
         android:layout_marginStart="32dp"
@@ -68,7 +68,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/cardName"
         android:layout_width="189dp"
         android:layout_height="39dp"
         android:layout_marginStart="32dp"
@@ -80,7 +80,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/cvv"
         android:layout_width="120dp"
         android:layout_height="39dp"
         android:layout_marginTop="364dp"
@@ -92,7 +92,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/expDate"
         android:layout_width="133dp"
         android:layout_height="39dp"
         android:layout_marginTop="432dp"

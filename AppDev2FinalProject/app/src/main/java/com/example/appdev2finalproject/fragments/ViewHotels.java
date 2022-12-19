@@ -58,7 +58,7 @@ public class ViewHotels extends Fragment {
             public void onClick(View view) {
                 String name = "";
                 String hotelDesc = "";
-                int price = 0;
+                int price = 14;
                 Hotel hotel = null;
                 TextView hotelName = rootView.findViewById(R.id.aiAiHotel); // Hotel Name
                 name = hotelName.getText().toString();
@@ -76,7 +76,7 @@ public class ViewHotels extends Fragment {
             public void onClick(View view) {
                 String name = "";
                 String hotelDesc = "";
-                int price = 0;
+                int price = 10;
                 Hotel hotel = null;
                 TextView hotelName = rootView.findViewById(R.id.ewHotel); // Hotel Name
                 name = hotelName.getText().toString();
@@ -93,7 +93,7 @@ public class ViewHotels extends Fragment {
             public void onClick(View view) {
                 String name = "";
                 String hotelDesc = "";
-                int price = 0;
+                int price = 50;
                 Hotel hotel = null;
                 TextView hotelName = rootView.findViewById(R.id.vipHotel); // Hotel Name
                 name = hotelName.getText().toString();
@@ -110,7 +110,7 @@ public class ViewHotels extends Fragment {
             public void onClick(View view) {
                 String name = "";
                 String hotelDesc = "";
-                int price = 0;
+                int price = 25;
                 Hotel hotel = null;
                 TextView hotelName = rootView.findViewById(R.id.trivagoHotel); // Hotel Name
                 name = hotelName.getText().toString();
@@ -127,7 +127,7 @@ public class ViewHotels extends Fragment {
             public void onClick(View view) {
                 String name = "";
                 String hotelDesc = "";
-                int price = 0;
+                int price = 30;
                 Hotel hotel = null;
                 TextView hotelName = rootView.findViewById(R.id.transHotel); // Hotel Name
                 name = hotelName.getText().toString();
