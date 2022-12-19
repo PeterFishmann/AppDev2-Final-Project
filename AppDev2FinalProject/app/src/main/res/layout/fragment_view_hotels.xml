@@ -179,7 +179,7 @@
         tools:visibility="invisible" />
 
     <Button
-        android:id="@+id/trans"
+        android:id="@+id/transButton"
         android:layout_width="114dp"
         android:layout_height="114dp"
         android:layout_marginStart="24dp"
@@ -206,7 +206,7 @@
         android:id="@+id/ew"
         android:layout_width="114dp"
         android:layout_height="112dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="28dp"
         android:layout_marginTop="452dp"
         android:background="@android:color/transparent"
         android:backgroundTint="@android:color/transparent"

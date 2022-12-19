@@ -46,7 +46,7 @@ public class ViewHotels extends Fragment {
         ew = rootView.findViewById(R.id.ew);
         vip = rootView.findViewById(R.id.vip);
         trivago = rootView.findViewById(R.id.trivago);
-        trans = rootView.findViewById(R.id.trans);
+        trans = rootView.findViewById(R.id.transButton);
 //        loadHotels(recyclerView);
 
         //for hotel details page
@@ -62,7 +62,8 @@ public class ViewHotels extends Fragment {
                 Hotel hotel = null;
                 TextView hotelName = rootView.findViewById(R.id.aiAiHotel); // Hotel Name
                 name = hotelName.getText().toString();
-                hotelDesc = ""; // Hotel Description,
+                TextView hotelDescc = rootView.findViewById(R.id.aiaiHotelDesc); // Hotel Description
+                hotelDesc = hotelDescc.getText().toString();
                 price = 14; // price for hotel per day
                 hotel = new Hotel(name, hotelDesc, price);
                 switchActivity(hotel);
@@ -79,7 +80,8 @@ public class ViewHotels extends Fragment {
                 Hotel hotel = null;
                 TextView hotelName = rootView.findViewById(R.id.ewHotel); // Hotel Name
                 name = hotelName.getText().toString();
-                hotelDesc = ""; // Hotel Description,
+                TextView hotelDescc = rootView.findViewById(R.id.ewHotelDesc); // Hotel Description
+                hotelDesc = hotelDescc.getText().toString();
                 price = 14; // price for hotel per day
                 hotel = new Hotel(name, hotelDesc, price);
                 switchActivity(hotel);
@@ -95,7 +97,8 @@ public class ViewHotels extends Fragment {
                 Hotel hotel = null;
                 TextView hotelName = rootView.findViewById(R.id.vipHotel); // Hotel Name
                 name = hotelName.getText().toString();
-                hotelDesc = ""; // Hotel Description,
+                TextView hotelDescc = rootView.findViewById(R.id.vipHotelDesc); // Hotel Description
+                hotelDesc = hotelDescc.getText().toString();
                 price = 14; // price for hotel per day
                 hotel = new Hotel(name, hotelDesc, price);
                 switchActivity(hotel);
@@ -111,7 +114,8 @@ public class ViewHotels extends Fragment {
                 Hotel hotel = null;
                 TextView hotelName = rootView.findViewById(R.id.trivagoHotel); // Hotel Name
                 name = hotelName.getText().toString();
-                hotelDesc = ""; // Hotel Description,
+                TextView hotelDescc = rootView.findViewById(R.id.trivagoHotelDesc); // Hotel Description
+                hotelDesc = hotelDescc.getText().toString();
                 price = 14; // price for hotel per day
                 hotel = new Hotel(name, hotelDesc, price);
                 switchActivity(hotel);
@@ -127,7 +131,8 @@ public class ViewHotels extends Fragment {
                 Hotel hotel = null;
                 TextView hotelName = rootView.findViewById(R.id.transHotel); // Hotel Name
                 name = hotelName.getText().toString();
-                hotelDesc = ""; // Hotel Description,
+                TextView hotelDescc = rootView.findViewById(R.id.transHotelDesc); // Hotel Description
+                hotelDesc = hotelDescc.getText().toString();
                 price = 14; // price for hotel per day
                 hotel = new Hotel(name, hotelDesc, price);
                 switchActivity(hotel);

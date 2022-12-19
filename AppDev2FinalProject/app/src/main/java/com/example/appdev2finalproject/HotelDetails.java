@@ -44,16 +44,16 @@ public class HotelDetails extends AppCompatActivity {
                 currentImage.setImageResource(R.drawable.aiai);
                 break;
             case "Hotel Transelvannia":
-                currentImage.setImageResource(R.drawable.ew);
+                currentImage.setImageResource(R.drawable.trans);
                 break;
             case "Hotel Trivago":
-                currentImage.setImageResource(R.drawable.vip);
-                break;
-            case "Hotel Vanhorne":
                 currentImage.setImageResource(R.drawable.trivago);
                 break;
+            case "Hotel Vanhorne":
+                currentImage.setImageResource(R.drawable.ew);
+                break;
             case "Hotel VIP":
-                currentImage.setImageResource(R.drawable.trans);
+                currentImage.setImageResource(R.drawable.vip);
                 break;
         }
     }
