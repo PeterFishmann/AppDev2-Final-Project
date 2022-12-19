@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.appdev2finalproject.HotelDetails;
+import com.example.appdev2finalproject.Hotel.HotelDetails;
 import com.example.appdev2finalproject.R;
 import com.example.appdev2finalproject.pogo.Hotel;
 
@@ -42,6 +42,7 @@ public class ViewHotels extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_view_hotels, container, false);
+        //find all the buttons
         aiai = rootView.findViewById(R.id.aiai);
         ew = rootView.findViewById(R.id.ew);
         vip = rootView.findViewById(R.id.vip);
@@ -51,7 +52,6 @@ public class ViewHotels extends Fragment {
 
         //for hotel details page
 
-        // TODO: 18-Dec.-2022  write descriptions later for hotels
         //buttons tracker
         aiai.setOnClickListener(new OnClickListener() {
             @Override
@@ -141,6 +141,19 @@ public class ViewHotels extends Fragment {
         return rootView;
     }
 
+    public void switchActivity(Hotel hotel) {
+//        HotelDetails hotelDetails = new HotelDetails();
+//        FragmentManager fragmentManager = getChildFragmentManager();
+//        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//        fragmentTransaction.add(R.id.fragment_container, hotelDetails);
+//        fragmentTransaction.commit();
+
+//        getChildFragmentManager().beginTransaction().add(R.id.fragment_container, new HotelDetails()).commit();
+
+        Intent switchActivity = new Intent(getActivity(), HotelDetails.class);
+        switchActivity.putExtra("hotelInfo", hotel);
+        startActivity(switchActivity);
+    }
 
 
 //    public void goToHotelPage(View view){
@@ -225,19 +238,4 @@ public class ViewHotels extends Fragment {
 //            recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
 //        }
 //    }
-
-    private void switchActivity(Hotel hotel) {
-//        HotelDetails hotelDetails = new HotelDetails();
-//        FragmentManager fragmentManager = getChildFragmentManager();
-//        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//        fragmentTransaction.add(R.id.fragment_container, hotelDetails);
-//        fragmentTransaction.commit();
-
-//        getChildFragmentManager().beginTransaction().add(R.id.fragment_container, new HotelDetails()).commit();
-
-        Intent switchActivity = new Intent(getActivity(), HotelDetails.class);
-        switchActivity.putExtra("hotelInfo", hotel);
-        startActivity(switchActivity);
-    }
-
 }
