@@ -29,7 +29,7 @@ public class HotelDetails extends AppCompatActivity {
 
         //current hotel image
         currentImage = (ImageView) findViewById(R.id.hotelDetailsImg);
-        setPizzaImg(currentHotel.name);
+        setHotelImg(currentHotel.name);
 
         //current hotel Description
         setHotelDesc();
@@ -53,7 +53,7 @@ public class HotelDetails extends AppCompatActivity {
         hotelDesc.setText(msg);
     }
 
-    public void setPizzaImg(String name) {
+    public void setHotelImg(String name) {
 
         switch (name) {
             case "Hotel Ai Ai":

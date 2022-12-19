@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.View.OnClickListener;
 import android.view.LayoutInflater;
@@ -142,17 +144,20 @@ public class ViewHotels extends Fragment {
     }
 
     public void switchActivity(Hotel hotel) {
-//        HotelDetails hotelDetails = new HotelDetails();
+
 //        FragmentManager fragmentManager = getChildFragmentManager();
 //        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//        fragmentTransaction.add(R.id.fragment_container, hotelDetails);
+//        fragmentTransaction.replace(R.id.fragment_container, BookHotelFragment);
 //        fragmentTransaction.commit();
+        HotelDetailsFragment hotelDetailsFragment = new HotelDetailsFragment();
+        Bundle args = new Bundle();
+        args.putSerializable("hotelInfo", hotel);
+        hotelDetailsFragment.setArguments(args);
+          getFragmentManager().beginTransaction().replace(R.id.fragment_container, hotelDetailsFragment).commit();
 
-//        getChildFragmentManager().beginTransaction().add(R.id.fragment_container, new HotelDetails()).commit();
-
-        Intent switchActivity = new Intent(getActivity(), HotelDetails.class);
-        switchActivity.putExtra("hotelInfo", hotel);
-        startActivity(switchActivity);
+//        Intent switchActivity = new Intent(getActivity(), HotelDetails.class);
+//        switchActivity.putExtra("hotelInfo", hotel);
+//        startActivity(switchActivity);
     }
 
 
