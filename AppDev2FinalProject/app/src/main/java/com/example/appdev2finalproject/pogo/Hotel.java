@@ -8,12 +8,11 @@ public class Hotel implements Serializable {
     String name;
     String hotelDesc;
     int price;
-    int img;
+//    int img;
 
-    public Hotel(String name, String hotelDesc, int price, int img) {
+    public Hotel(String name, String hotelDesc, int price) {
         this.name = name;
         this.hotelDesc = hotelDesc;
         this.price = price;
-        this.img = img;
     }
 }

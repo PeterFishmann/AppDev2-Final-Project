@@ -4,7 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.HotelDetails">
+    tools:context=".HotelDetails">
+
+    <TextView
+        android:id="@+id/hoteilDetailsDesc"
+        android:layout_width="342dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hotelDetailsName" />
 
     <ImageView
         android:id="@+id/hotelDetailsImg"
@@ -17,26 +27,6 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@tools:sample/avatars" />
 
-    <TextView
-        android:id="@+id/hotelDetailsName"
-        android:layout_width="343dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hotelDetailsImg" />
-
-    <TextView
-        android:id="@+id/hoteilDetailsDesc"
-        android:layout_width="342dp"
-        android:layout_height="109dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hotelDetailsName" />
-
     <Button
         android:id="@+id/bookHotelBtn"
         android:layout_width="wrap_content"
@@ -47,4 +37,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/hotelDetailsName"
+        android:layout_width="343dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hotelDetailsImg" />
 </androidx.constraintlayout.widget.ConstraintLayout>

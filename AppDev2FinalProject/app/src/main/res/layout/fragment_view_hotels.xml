@@ -12,6 +12,8 @@
         android:layout_height="114dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="36dp"
+        android:onClick="goToHotelPage"
+        android:clickable="true"
         android:src="@drawable/aiai"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,7 +25,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="468dp"
         android:text="Hotel Vanhorne"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/ewHotelImg"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -33,7 +35,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="Vanhorne nothing to tell"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/ewHotelImg"
         app:layout_constraintTop_toBottomOf="@+id/ewHotel" />
 
     <TextView
@@ -73,7 +75,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="176dp"
         android:text="Hotel Transelvannia"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toEndOf="@+id/transHotelImg"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -113,21 +115,24 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="212dp"
         android:text="Hotel Transelvannia for all the freaks and monsters"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toEndOf="@+id/transHotelImg"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/ewHotelImg"
         android:layout_width="114dp"
         android:layout_height="114dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
+        android:clickable="true"
         android:src="@drawable/ew"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/transHotelImg"
+        android:onClick="goToHotelPage"
+        android:clickable="true"
         android:layout_width="114dp"
         android:layout_height="114dp"
         android:layout_marginStart="24dp"
@@ -138,13 +143,15 @@
 
     <ImageView
         android:id="@+id/imageView4"
+        android:onClick="goToHotelPage"
+        android:clickable="true"
         android:layout_width="114dp"
         android:layout_height="114dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:src="@drawable/trivago"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/transHotelImg" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -152,7 +159,71 @@
         android:layout_height="114dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
+        android:clickable="true"
+        android:onClick="goToHotelPage"
         android:src="@drawable/vip"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/ewHotelImg" />
+
+    <Button
+        android:id="@+id/aiai"
+        android:layout_width="114dp"
+        android:layout_height="114dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="36dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/trans"
+        android:layout_width="114dp"
+        android:layout_height="114dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="176dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/trivago"
+        android:layout_width="114dp"
+        android:layout_height="114dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="312dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/ew"
+        android:layout_width="114dp"
+        android:layout_height="112dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="452dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/vip"
+        android:layout_width="114dp"
+        android:layout_height="112dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="588dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
