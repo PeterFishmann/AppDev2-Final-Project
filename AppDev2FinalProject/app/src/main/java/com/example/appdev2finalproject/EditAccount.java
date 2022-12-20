@@ -1,4 +1,4 @@
-package com.example.appdev2finalproject.fragments;
+package com.example.appdev2finalproject;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -16,7 +16,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.example.appdev2finalproject.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;

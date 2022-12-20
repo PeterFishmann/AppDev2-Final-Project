@@ -15,20 +15,6 @@
         android:theme="@style/Theme.AppDev2FinalProject"
         tools:targetApi="31">
         <activity
-            android:name=".Hotel.BookHotel"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".Hotel.HotelDetails"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".Dashboard"
             android:exported="false"
             android:theme="@style/AppTheme" />

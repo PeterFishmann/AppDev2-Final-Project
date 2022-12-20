@@ -14,12 +14,11 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.appdev2finalproject.Authentication.MainActivity;
-import com.example.appdev2finalproject.fragments.CreateListing;
-import com.example.appdev2finalproject.fragments.EditAccount;
-import com.example.appdev2finalproject.fragments.MyAccount;
-import com.example.appdev2finalproject.fragments.MyListings;
-import com.example.appdev2finalproject.fragments.ViewHotels;
-import com.example.appdev2finalproject.fragments.ViewWalletFragment;
+import com.example.appdev2finalproject.SidebarOptions.CreateListing;
+import com.example.appdev2finalproject.SidebarOptions.MyAccount;
+import com.example.appdev2finalproject.SidebarOptions.MyListings;
+import com.example.appdev2finalproject.SidebarOptions.ViewHotels.ViewHotels;
+import com.example.appdev2finalproject.SidebarOptions.MyWallet;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -89,7 +88,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MyListings()).commit();
                 break;
             case R.id.nav_wallet:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ViewWalletFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MyWallet()).commit();
                 break;
             case R.id.nav_logout:
                 Toast.makeText(this, "Logged out", Toast.LENGTH_SHORT).show();

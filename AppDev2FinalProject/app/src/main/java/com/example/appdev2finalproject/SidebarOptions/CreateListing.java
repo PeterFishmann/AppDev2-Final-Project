@@ -1,4 +1,4 @@
-package com.example.appdev2finalproject.fragments;
+package com.example.appdev2finalproject.SidebarOptions;
 
 import android.os.Bundle;
 
