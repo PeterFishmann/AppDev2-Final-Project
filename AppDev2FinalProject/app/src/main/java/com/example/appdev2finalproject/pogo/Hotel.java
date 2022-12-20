@@ -8,7 +8,7 @@ public class Hotel implements Serializable {
     public String name;
     public String hotelDesc;
     public int price;
-//    int img;
+    public String numOfDays;
 
     public Hotel(String name, String hotelDesc, int price) {
         this.name = name;

@@ -75,11 +75,13 @@ public class BookHotelFragment extends Fragment {
         setHotelDesc();
         setPrice();
         bookHotel = rootview.findViewById(R.id.bookHotel2);
+        String numOfDays = mspin.getSelectedItem().toString();
         bookHotel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 MyOrders myOrders = new MyOrders();
                 Bundle args = new Bundle();
+                currentHotel.numOfDays = numOfDays;
                 args.putSerializable("hotelInfo", currentHotel);
                 myOrders.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, myOrders).commit();
