@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.appdev2finalproject.R;
 import com.example.appdev2finalproject.pogo.Hotel;
@@ -84,6 +85,7 @@ public class BookHotelFragment extends Fragment {
                 currentHotel.numOfDays = numOfDays;
                 args.putSerializable("hotelInfo", currentHotel);
                 myOrders.setArguments(args);
+                Toast.makeText(getContext(), "Hotel booked!", Toast.LENGTH_SHORT).show();
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, myOrders).commit();
             }
         });
