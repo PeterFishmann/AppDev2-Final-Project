@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ViewHotels.HotelDetails">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/hoteilDetailsDesc"
@@ -16,10 +15,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hotelDetailsName" />
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/hotelDetailsImg"
         android:layout_width="345dp"
         android:layout_height="445dp"
+        app:shapeAppearanceOverlay="@style/roundedSquare"
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
