@@ -57,6 +57,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         navigationView.setNavigationItemSelectedListener(this);
 
         navigationView.setCheckedItem(R.id.nav_dashboard);
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new com.example.appdev2finalproject.SidebarOptions.Dashboard()).commit();
     }
 
     public void onBackPressed() {
@@ -71,10 +72,9 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
-//            case R.id.nav_view:
-//                Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.fragment_container);
-//                getSupportFragmentManager().beginTransaction().remove(fragment).commit();
-//                break;
+            case R.id.nav_dashboard:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new com.example.appdev2finalproject.SidebarOptions.Dashboard()).commit();
+                break;
             case R.id.nav_hotels:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ViewHotels()).commit();
                 break;
