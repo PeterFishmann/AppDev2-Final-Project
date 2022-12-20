@@ -11,6 +11,6 @@
     </style>
 
     <color name="colorPrimary">#FFFFFF</color>
-    <color name="colorPrimaryDark">#00838F</color>
+    <color name="colorPrimaryDark">#D5CBCB</color>
     <color name="colorAccent">#F44336</color>
 </resources>
