@@ -8,11 +8,15 @@
 
     <ImageView
         android:id="@+id/aiAiHotelImg"
+
         android:layout_width="114dp"
         android:layout_height="114dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="36dp"
         android:onClick="goToHotelPage"
+        android:background="@drawable/roundedcorner"
+        android:elevation="10dp"
+        android:textAlignment="center"
         android:clickable="true"
         android:src="@drawable/aiai"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,100 +24,131 @@
 
     <TextView
         android:id="@+id/ewHotel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="117dp"
+        android:layout_height="27dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="468dp"
+        android:background="@drawable/roundedcorner"
+        android:elevation="10dp"
+
         android:text="Hotel Vanhorne"
+        android:textAlignment="center"
         app:layout_constraintStart_toEndOf="@+id/ewHotelImg"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/ewHotelDesc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="164dp"
+        android:layout_height="26dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/roundedcorner"
+        android:elevation="10dp"
         android:text="Vanhorne nothing to tell"
+        android:textAlignment="center"
         app:layout_constraintStart_toEndOf="@+id/ewHotelImg"
         app:layout_constraintTop_toBottomOf="@+id/ewHotel" />
 
     <TextView
         android:id="@+id/vipHotel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="98dp"
+        android:layout_height="22dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="600dp"
+        android:background="@drawable/roundedcorner"
+        android:elevation="10dp"
         android:text="Hotel VIP"
+        android:textAlignment="center"
         app:layout_constraintStart_toEndOf="@+id/vipImg"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/vipHotelDesc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="90dp"
+        android:layout_height="21dp"
+        android:background="@drawable/roundedcorner"
+        android:textAlignment="center"
+        android:elevation="10dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="20dp"
         android:text="Only for VIP"
         app:layout_constraintStart_toEndOf="@+id/vipImg"
         app:layout_constraintTop_toBottomOf="@+id/vipHotel" />
 
     <TextView
         android:id="@+id/aiAiHotel"
-        android:layout_width="271dp"
-        android:layout_height="wrap_content"
+        android:layout_width="137dp"
+        android:layout_height="23dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="56dp"
+        android:elevation="10dp"
+        android:background="@drawable/roundedcorner"
         android:text="Hotel Ai Ai"
+        android:textAlignment="center"
         app:layout_constraintStart_toEndOf="@+id/aiAiHotelImg"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/transHotel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="143dp"
+        android:layout_height="19dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="176dp"
+        android:background="@drawable/roundedcorner"
+        android:elevation="10dp"
         android:text="Hotel Transelvannia"
+        android:textAlignment="center"
         app:layout_constraintStart_toEndOf="@+id/transHotelImg"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/trivagoHotel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="103dp"
+        android:layout_height="22dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="332dp"
+        android:background="@drawable/roundedcorner"
+        android:elevation="10dp"
         android:text="Hotel Trivago"
+        android:textAlignment="center"
         app:layout_constraintStart_toEndOf="@+id/trivagoImg"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/trivagoHotelDesc"
-        android:layout_width="271dp"
-        android:layout_height="wrap_content"
+        android:layout_width="203dp"
+        android:layout_height="26dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="364dp"
+        android:background="@drawable/roundedcorner"
+        android:elevation="10dp"
         android:text="Trivago the only option"
+        android:textAlignment="center"
         app:layout_constraintStart_toEndOf="@+id/trivagoImg"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/aiaiHotelDesc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="187dp"
+        android:layout_height="22dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="88dp"
+        android:background="@drawable/roundedcorner"
+        android:elevation="10dp"
         android:text="Hotel where Ai Ai happens"
+        android:textAlignment="center"
         app:layout_constraintStart_toEndOf="@+id/aiAiHotelImg"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/transHotelDesc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="214dp"
+        android:layout_height="45dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="212dp"
+        android:layout_marginTop="216dp"
+        android:background="@drawable/roundedcorner"
+        android:textAlignment="center"
+        android:elevation="10dp"
         android:text="Hotel Transelvannia for all the freaks and monsters"
         app:layout_constraintStart_toEndOf="@+id/transHotelImg"
         app:layout_constraintTop_toTopOf="parent" />
