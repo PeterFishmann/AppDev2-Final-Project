@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.example.appdev2finalproject.R;
 import com.example.appdev2finalproject.pogo.Hotel;
@@ -25,6 +26,7 @@ public class BookHotelFragment extends Fragment {
     Spinner mspin;
     EditText creditCard, cvv, cardName, expDate;
     View rootview;
+    Hotel obj;
 
     public BookHotelFragment() {
 
@@ -43,9 +45,8 @@ public class BookHotelFragment extends Fragment {
         super.onCreate(savedInstanceState);
         Bundle args = getArguments();
         if (args != null) {
-            currentHotel = (Hotel) args.getSerializable("hotelInfo");
+            obj = (Hotel) args.getSerializable("hotelInfo");
         }
-
     }
 
     @Override
@@ -53,8 +54,10 @@ public class BookHotelFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         rootview = inflater.inflate(R.layout.fragment_book_hotel, container, false);
-        setHotelDesc();
-        setPrice();
+
+        currentHotel = obj;
+        currentImage = (ImageView) rootview.findViewById(R.id.imageView);
+        setHotelImg(currentHotel.name);
 
         //dropdown numbers fill
         mspin = rootview.findViewById(R.id.spinner);
@@ -69,6 +72,19 @@ public class BookHotelFragment extends Fragment {
         expDate = rootview.findViewById(R.id.expDate);
 
         //process the data and use it?
+        setHotelDesc();
+        setPrice();
+        bookHotel = rootview.findViewById(R.id.bookHotel2);
+        bookHotel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MyOrders myOrders = new MyOrders();
+                Bundle args = new Bundle();
+                args.putSerializable("hotelInfo", currentHotel);
+                myOrders.setArguments(args);
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, myOrders).commit();
+            }
+        });
         return rootview;
     }
 
@@ -76,5 +92,29 @@ public class BookHotelFragment extends Fragment {
     }
 
     private void setHotelDesc() {
+        TextView hotelDesc = rootview.findViewById(R.id.hotelDetail);
+        String info = currentHotel.hotelDesc;
+        String msg = "\"" + info + "\"";
+        hotelDesc.setText(msg);
+    }
+
+    private void setHotelImg(String name) {
+        switch (name) {
+            case "Hotel Ai Ai":
+                currentImage.setImageResource(R.drawable.aiai);
+                break;
+            case "Hotel Transelvannia":
+                currentImage.setImageResource(R.drawable.trans);
+                break;
+            case "Hotel Trivago":
+                currentImage.setImageResource(R.drawable.trivago);
+                break;
+            case "Hotel Vanhorne":
+                currentImage.setImageResource(R.drawable.ew);
+                break;
+            case "Hotel VIP":
+                currentImage.setImageResource(R.drawable.vip);
+                break;
+        }
     }
 }

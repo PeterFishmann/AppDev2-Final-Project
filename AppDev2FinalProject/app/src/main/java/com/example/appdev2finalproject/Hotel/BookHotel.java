@@ -13,8 +13,8 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.example.appdev2finalproject.MyOrders;
 import com.example.appdev2finalproject.R;
+import com.example.appdev2finalproject.fragments.MyOrders;
 import com.example.appdev2finalproject.pogo.Hotel;
 
 public class BookHotel extends AppCompatActivity {
@@ -53,7 +53,7 @@ public class BookHotel extends AppCompatActivity {
         //process the data and use it?
 
         //confirm the hotel, and save data such as hotel names, img, days in db. Head to My orders page
-        bookHotel = findViewById(R.id.button);
+        bookHotel = findViewById(R.id.bookHotel2);
         bookHotel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
