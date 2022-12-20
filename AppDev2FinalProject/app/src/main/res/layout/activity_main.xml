@@ -4,84 +4,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Authentication.MainActivity"
-    android:background="@drawable/background">
+    android:alpha="0.8"
+    android:background="@drawable/mainimg2"
+    android:backgroundTint="#000000"
+    android:backgroundTintMode="screen"
+    android:foreground="@drawable/transparency"
+    tools:context=".Authentication.MainActivity">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="342dp"
-        android:layout_height="102dp"
-        android:layout_marginStart="63dp"
-        android:layout_marginTop="115dp"
-        android:layout_marginEnd="63dp"
-        android:layout_marginBottom="80dp"
+        android:layout_width="243dp"
+        android:layout_height="55dp"
         android:fontFamily="sans-serif-condensed-light"
-        android:textAlignment="center"
         android:text="Total Travel"
-        android:textColor="@color/cardview_dark_background"
-        android:textSize="60dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="41dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/etEmail"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="73dp" />
 
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="2dp"
-        android:layout_marginBottom="40dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="Email"
-        app:layout_constraintBottom_toTopOf="@+id/etPassword"
-        app:layout_constraintEnd_toEndOf="@+id/etPassword"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="269dp" />
 
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
         android:ems="10"
-        android:inputType="textPassword"
         android:hint="Password"
-        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="354dp" />
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="31dp"
         android:text="Log In"
         app:backgroundTint="@color/design_default_color_error"
-        app:layout_constraintBottom_toTopOf="@+id/btnSignup"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="448dp" />
 
     <Button
         android:id="@+id/btnSignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="159dp"
         android:text="Signup"
         app:backgroundTint="@color/teal_700"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/btnLogin"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="527dp" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="156dp"
-        android:layout_marginBottom="52dp"
         android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="631dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
