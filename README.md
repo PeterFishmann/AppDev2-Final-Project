@@ -3,7 +3,6 @@
 ## Project Title - Total travel
 
 ![](https://github.com/PeterFishmann/AppDev2-Final-Project/blob/main/AppDev2FinalProject/plane.gif)
-![](https://github.com/PeterFishmann/AppDev2-Final-Project/blob/main/AppDev2FinalProject/giphy.gif)
 
 ## Team members:
 ### Alihan Djamankulov
