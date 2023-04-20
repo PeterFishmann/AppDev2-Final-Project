@@ -4,7 +4,6 @@
 
 ![](https://github.com/PeterFishmann/AppDev2-Final-Project/blob/main/AppDev2FinalProject/plane.gif)
 ![](https://github.com/PeterFishmann/AppDev2-Final-Project/blob/main/AppDev2FinalProject/giphy.gif)
-![](https://github.com/Smuglyak/EcommerceProject/blob/main/images/pochitadancing-pochita.gif)
 
 ## Team members:
 ### Alihan Djamankulov
